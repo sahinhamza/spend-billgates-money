@@ -22,7 +22,7 @@ export const initialProduct = [
     { id: 21, name: "Designer Handbag", price: 5500, count: 0, src: "/images/designer-handbag.jpg" },
     { id: 22, name: "Hot Tub", price: 6000, count: 0, src: "/images/hot-tub.jpg" },
     { id: 23, name: "Luxury Wine", price: 7000, count: 0, src: "/images/luxury-wine.jpg" },
-    { id: 24, name: "Diamond Ring", price: 10000, count: 0, src: "/images/diamong-ring.jpg" },
+    { id: 24, name: "Diamond Ring", price: 10000, count: 0, src: "/images/diamond-ring.jpg" },
     { id: 25, name: "Jet Ski", price: 12000, count: 0, src: "/images/jet-ski.jpg" },
     { id: 26, name: "Rolex", price: 15000, count: 0, src: "/images/rolex.jpg" },
     { id: 27, name: "Ford F-150", price: 30000, count: 0, src: "/images/ford-f-150.jpg" },
