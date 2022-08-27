@@ -1,13 +1,230 @@
-body {
+*,
+:after,
+:before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background: #f1f2f6;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+.App {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333;
+}
+
+.header {
+  font-size: 32px;
+  background: #fff;
+  padding: 30px 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.header img {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 125px;
+  height: 125px;
+  margin: 10px auto 25px;
+  border-radius: 125px;
+}
+
+.billgates-money {
+  color: #fff;
+  background-color: #2ecc71;
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
+  padding: 20px;
+  margin: 10px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item-wrapper {
+  max-width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 15px;
+  width: 100%;
+}
+
+.item-img {
+  display: block;
+  margin: 15px auto;
+  height: 120px;
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.item-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.item-price {
+  font-size: 20px;
+  color: #24c486;
+}
+
+.item-controls {
+  font-size: 20px;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 10px;
+  margin-top: 25px;
+}
+
+.item-input,
+button {
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  background: #f1f2f6 !important;
+  border: none;
+  color: #333;
+  cursor: auto;
+  touch-action: manipulation;
+}
+
+.item-sell {
+  background: linear-gradient(180deg, #f53b82, #f53b57);
+}
+
+.item-buy {
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
+}
+
+.item-input {
+  padding: 9px 12px;
+  border-radius: 3px;
+  border: 1px solid #b2bec3;
+  color: #333;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.footer {
+  max-width: 100%;
+  font-size: 18px;
+  padding: 15px 15px 30px;
+  margin-top: 10px;
+}
+
+.footer-headline {
+  font-size: 28px;
+  padding: 15px 15px 25px;
+  font-weight: 700;
+}
+
+.footer,
+.footer-headline {
+  background-color: #fff;
+  text-align: center;
+}
+
+.footer-items {
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+  grid-gap: 10px 0;
+  font-size: 18px;
+  grid-template-columns: 170px 45px 75px;
+}
+
+.footer-item-name {
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.footer-item-amount {
+  text-align: left;
+}
+
+.footer-item-cost {
+  font-weight: 700;
+}
+
+.footer-total {
+  font-weight: 700;
+  max-width: 300px;
+  border-top: 1px solid #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-total-money,
+.footer-item-cost {
+  color: #24c486;
+  text-align: right;
 }
